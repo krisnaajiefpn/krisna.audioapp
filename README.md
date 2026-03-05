@@ -16,14 +16,16 @@ The system is define the promo active for an audio based on time, scope, priorit
 
 ## 1. Clone Repo
 
-bash
+```bash
 git clone https://github.com/krisnaajiefpn/krisna.audioapp
 cd <folder>
+```
 
 ## 2. Install Dependencies
 
-bash
+```bash
 npm install
+```
 
 
 ## 3. Environment Config
@@ -34,11 +36,12 @@ Already on ".env"
 
 # Run Applicatinn
 
-bash
+```bash
 npm run migrate
 npm run seed
 npm start
 npm start
+```
 
 Server will run at
 
@@ -46,7 +49,7 @@ http://localhost:3000
 
 # Database Serup
 
-bash
+```bash
 CREATE TABLE audio (
 	id SERIAL PRIMARY KEY,
 	title VARCHAR(200),
@@ -64,7 +67,7 @@ CREATE TABLE audio (
 	channel_id INT,
 	deleted_at TIMESTAMP
 )
-
+```
 ---
 
 # API ENDPOINTS
@@ -74,11 +77,12 @@ CREATE TABLE audio (
 Returns all audio informations.
 
 Endpoint
-bash
+```bash
 /GET http://localhost:3000/api/audios
+```
 
 Response
-bash
+```bash
 {
     "status": 200,
     "message": "Success Get All Audio List",
@@ -136,6 +140,7 @@ bash
         }
     ]
 }
+```
 
 ## 2. GET Audio List + Active Promo
 
@@ -147,11 +152,12 @@ Rules:
 - delete is null
 
 Endpoint
-bash
+```bash
 /GET http://localhost:3000/api/audios/active
+```
 
 Response
-bash
+```bash
 {
     "status": 200,
     "message": "Success Get Audio + Active Promo",
@@ -173,17 +179,19 @@ bash
         }
     ]
 }
+```
 
 ## 3. GET Promo List
 
 Returns all promo informations.
 
 Endpoint
-bash
+```bash
 /GET http://localhost:3000/api/promotions
+```
 
 Response
-bash
+```bash
 {
     "status": 200,
     "message": "Success Get List All Promo",
@@ -232,17 +240,19 @@ bash
         }
     ]
 }
+```
 
 ## 4. CREATE Promo
 
 Create new promo.
 
 Endpoint
-bash
+```bash
 /POST http://localhost:3000/api/promotions
+```
 
 Body
-bash
+```bash
 {
     "audio_id": 4,
     "network_id": 1,
@@ -255,24 +265,27 @@ bash
     "end_at": "2026-03-02 10:00:00"
 
 }
+```
 
 Response
-bash
+```bash
 {
     "status": 201,
     "message": "Success Create (1) Promo"
 }
+```
 
 ## 5. UPDATE Promo
 
 Update existing promo.
 
 Endpoint
-bash
+```bash
 /PUT http://localhost:3000/api/promotions/1
+```
 
 Body
-bash
+```bash
 {
     "priority": 11,
     "visible": true,
@@ -280,25 +293,29 @@ bash
     "end_at": "2026-03-10 10:00:00"
 
 }
+```
 
 Response
-bash
+```bash
 {
     "status": 200,
     "message": "Success Update (1) Promo"
 }
+```
 
 ## 5. DELETE Promo
 
 Soft delete promo with delete_at value.
 
 Endpoint
-bash
+```bash
 /DELETE http://localhost:3000/api/promotions/1
+```
 
 Response
-bash
+```bash
 {
     "status": 200,
     "message": "Success Delete Promo"
 }
+```
