@@ -146,6 +146,34 @@ Rules:
 - promo is active between start_at and end_at
 - delete is null
 
+Endpoint
+bash
+/GET http://localhost:3000/api/audios/active
+
+Response
+bash
+{
+    "status": 200,
+    "message": "Success Get Audio + Active Promo",
+    "data": [
+        {
+            "id": 1,
+            "title": "Test",
+            "network_id": 1,
+            "mformat": "mp3",
+            "channel_id": 101,
+            "has_promo": true,
+            "promo": {
+                "id": 1,
+                "priority": 10,
+                "version": 1,
+                "start_at": "2026-03-03T09:00:00.000Z",
+                "end_at": "2026-03-10T09:00:00.000Z"
+            }
+        }
+    ]
+}
+
 ## 3. GET Promo List
 
 Returns all promo informations.
