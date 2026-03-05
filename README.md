@@ -178,6 +178,61 @@ bash
 
 Returns all promo informations.
 
+Endpoint
+bash
+/GET http://localhost:3000/api/promotions
+
+Response
+bash
+{
+    "status": 200,
+    "message": "Success Get List All Promo",
+    "data": [
+        {
+            "id": 3,
+            "audio_id": 4,
+            "network_id": 1,
+            "mformat": "music",
+            "channel_id": null,
+            "priority": 10,
+            "version": 1,
+            "visible": true,
+            "start_at": "2026-03-05T09:00:00.000Z",
+            "end_at": "2026-03-10T09:00:00.000Z",
+            "created_at": "2026-03-05T08:32:24.959Z",
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "audio_id": 4,
+            "network_id": 1,
+            "mformat": "music",
+            "channel_id": 101,
+            "priority": 10,
+            "version": 1,
+            "visible": true,
+            "start_at": "2026-03-05T09:00:00.000Z",
+            "end_at": "2026-03-10T09:00:00.000Z",
+            "created_at": "2026-03-05T08:32:24.959Z",
+            "deleted_at": null
+        },
+        {
+            "id": 1,
+            "audio_id": 1,
+            "network_id": 1,
+            "mformat": "mp3",
+            "channel_id": 101,
+            "priority": 10,
+            "version": 1,
+            "visible": true,
+            "start_at": "2026-03-03T09:00:00.000Z",
+            "end_at": "2026-03-10T09:00:00.000Z",
+            "created_at": "2026-03-05T06:25:59.853Z",
+            "deleted_at": null
+        }
+    ]
+}
+
 ## 4. CREATE Promo
 
 Create new promo.
@@ -236,3 +291,14 @@ bash
 ## 5. DELETE Promo
 
 Soft delete promo with delete_at value.
+
+Endpoint
+bash
+/DELETE http://localhost:3000/api/promotions/1
+
+Response
+bash
+{
+    "status": 200,
+    "message": "Success Delete Promo"
+}
