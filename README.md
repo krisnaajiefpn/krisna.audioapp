@@ -73,6 +73,70 @@ CREATE TABLE audio (
 
 Returns all audio informations.
 
+Endpoint
+bash
+/GET http://localhost:3000/api/audios
+
+Response
+bash
+{
+    "status": 200,
+    "message": "Success Get All Audio List",
+    "data": [
+        {
+            "id": 1,
+            "title": "Test",
+            "network_id": 1,
+            "mformat": "mp3",
+            "channel_id": 101,
+            "has_promo": true,
+            "promo": {
+                "id": 1,
+                "priority": 10,
+                "version": 1,
+                "start_at": "2026-03-03T09:00:00.000Z",
+                "end_at": "2026-03-10T09:00:00.000Z"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Audio 001",
+            "network_id": 1,
+            "mformat": "nature",
+            "channel_id": 102,
+            "has_promo": false,
+            "promo": null
+        },
+        {
+            "id": 3,
+            "title": "Audio 002",
+            "network_id": 1,
+            "mformat": "nature",
+            "channel_id": 103,
+            "has_promo": false,
+            "promo": null
+        },
+        {
+            "id": 4,
+            "title": "Audio 003",
+            "network_id": 2,
+            "mformat": "music",
+            "channel_id": 104,
+            "has_promo": false,
+            "promo": null
+        },
+        {
+            "id": 5,
+            "title": "Audio 004",
+            "network_id": 2,
+            "mformat": "podcast",
+            "channel_id": 105,
+            "has_promo": false,
+            "promo": null
+        }
+    ]
+}
+
 ## 2. GET Audio List + Active Promo
 
 Returns all audio informations that have valid promotions.
