@@ -182,6 +182,32 @@ Returns all promo informations.
 
 Create new promo.
 
+Endpoint
+bash
+/POST http://localhost:3000/api/promotions
+
+Body
+bash
+{
+    "audio_id": 4,
+    "network_id": 1,
+    "mformat": "podcast",
+    "channel_id": 102,
+    "priority": 50,
+    "version": 1,
+    "visible": false,
+    "start_at": "2026-03-01 10:00:00",
+    "end_at": "2026-03-02 10:00:00"
+
+}
+
+Response
+bash
+{
+    "status": 201,
+    "message": "Success Create (1) Promo"
+}
+
 ## 5. UPDATE Promo
 
 Update existing promo.
