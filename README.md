@@ -25,6 +25,7 @@ cd <folder>
 bash
 npm install
 
+
 ## 3. Environment Config
 
 Already on ".env"
@@ -34,7 +35,10 @@ Already on ".env"
 # Run Applicatinn
 
 bash
-node server.js
+npm run migrate
+npm run seed
+npm start
+npm start
 
 Server will run at
 
