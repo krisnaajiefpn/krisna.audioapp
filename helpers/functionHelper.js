@@ -1,3 +1,4 @@
+// Helper general to handle return responses
 function sendRes(res, status, message, data = null) {
     const payload = {
         status,
