@@ -78,7 +78,7 @@ router.put('/:id', async (req,res)=>{
                 end_at=$4
             WHERE ID=$5
             RETURNING *`,
-            [priority, visible, start_at, end_at]
+            [priority, visible, start_at, end_at, id]
         )
 
         // res.json(result.rows[0])
