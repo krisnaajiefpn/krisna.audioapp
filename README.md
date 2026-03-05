@@ -46,7 +46,7 @@ http://localhost:3000
 
 # Database Serup
 
-sql
+bash
 CREATE TABLE audio (
 	id SERIAL PRIMARY KEY,
 	title VARCHAR(200),
