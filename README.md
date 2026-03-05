@@ -212,6 +212,27 @@ bash
 
 Update existing promo.
 
+Endpoint
+bash
+/PUT http://localhost:3000/api/promotions/1
+
+Body
+bash
+{
+    "priority": 11,
+    "visible": true,
+    "start_at": "2026-03-05 10:00:00",
+    "end_at": "2026-03-10 10:00:00"
+
+}
+
+Response
+bash
+{
+    "status": 200,
+    "message": "Success Update (1) Promo"
+}
+
 ## 5. DELETE Promo
 
 Soft delete promo with delete_at value.
